@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-    <title>T-Tyme</title>
-    <link href='style.css' rel='stylesheet' type='text/css'/>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./index.js" type="text/javascript"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>T-Tyme | Welcome </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the third iteration of my website">
+    <meta name="keywords" content="Tea, T-Tyme, Blog">
+    <meta name="author" content="Andrew Tsai">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <script src="main.js" type="text/javascript"></script>
 </head>
-
 <body>
-    <!-- NAVBAR -->
     <header>
-        <nav>
-            <div class="navbar">
-                <img src="https://lh5.googleusercontent.com/0T5wpagndcNtlFZj6WLDD-7FBilFEYtaGj76XV7dPMgqk0DZ8Kn0AeKEhCE=w2400" class="imageLogo" alt="super cool logo" />   
-                <h1> T-Tyme </h1>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>|</li>
-                    <li><a href="./about.html">About</a></li>
-                    <li>|</li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
+        <div class="container">
+            <div id="branding">
+                <img src="https://lh5.googleusercontent.com/0T5wpagndcNtlFZj6WLDD-7FBilFEYtaGj76XV7dPMgqk0DZ8Kn0AeKEhCE=w2400" class="logo" alt="super cool logo" />
+                <h1><span class="highlight">T-Tyme</span> Best Tyme</h1>
             </div>
-        </nav>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <section id="showcase">
+        <div class="container">
+            <h1>T-Type's Blog</h1>
+            <p>This is my website. There are many websites out there but this one is mine.</p>
+        </div>
+    </section>
     
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe To Our Non-existent Newsletter</h1>
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
-    <!-- Main -->
-    <div class ="grid">
-        <div class = "box a">
-            <a href="./about.html">
-                <p>About</p>
-                <img src='https://lh6.googleusercontent.com/9-cI-aQLoRAQysivFq415NoNWaoK8bk_oNqx0lnkS3JZ22VICQiEKeFgi70=w2400' class="imageAbout"  alt="About" />
-            </a>
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <a href="menu.html">
+                    <img src='https://lh6.googleusercontent.com/ZgjO5Bb8NwPo1zaKypJSovUHBRG0wmc1jKV57ohIJ99IUvgIs5E9_3Paoro=w2400' alt="Menu">
+                </a>
+                <h3>Menu</h3>
+                <p>A selection of dishes perfected since college</p>
+            </div>
+            <div class="box">
+                <a href="photography.html">
+                    <img src='https://lh6.googleusercontent.com/9022Zt54EJjzvLETkFeNVWY2PodsdsXsAmxz7f6ImrXqLLAix6-wBb_eKCU=w2400' alt="Photography">
+                </a>
+                <h3>Photography</h3>
+                <p>A selection of my favorite photographs</p>
+            </div>
+            <div class="box">
+                <a href="applications.html">
+                    <img src='https://lh3.googleusercontent.com/fn_Bd1e17QQJo2OGsxuHcNlFTs-kej9uqpYY14TmvwzVvd2w0_R1_40ZZ7aQJHJB2YcqnFZkOHFpvBDXPCpm2DSuxzYr69hwK8KhbwQHg6rdlIlzdFxyLYF40BRulUQQMs6xm7S0Z8s=w2400'>
+                </a>
+                <h3>Applications</h3>
+                <p>One day there will be great apps</p>
+            </div>
         </div>
-        <div class = "box b">
-            <a href="menu.html">
-                <p>Menu</p>
-                <img src='https://lh6.googleusercontent.com/ZgjO5Bb8NwPo1zaKypJSovUHBRG0wmc1jKV57ohIJ99IUvgIs5E9_3Paoro=w2400'class="imageMenu" alt="Menu" />
-            </a>
-        </div>
-        <div class = "box c">
-            <a href="photography.html">
-                <p>Photography</p>
-                <img src='https://lh6.googleusercontent.com/9022Zt54EJjzvLETkFeNVWY2PodsdsXsAmxz7f6ImrXqLLAix6-wBb_eKCU=w2400' class="imagePhotography" alt="Photography">
-            </a>
-        </div>
-        <div class = "box d">
-            <a href="tools.html">
-                <p>Tools</p>
-                <img src='https://lh5.googleusercontent.com/2PPECd5zLQO2VRq3_mFGru8I5NFjM8nwbXPZMRITH3XNJTXPMJHS0xKlJxI=w2400' class="imageCat" alt="Cat Repository">
-            </a>
-        </div>
-    </div>
+    </section>
 
     <footer>
-        <p></p>
+        <p> T-Type, Copyright &copy; 2019 </p>
     </footer>
-
-    
 </body>
-
 </html>
