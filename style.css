@@ -5,7 +5,7 @@ body{
     background-color: #f4f4f4;
 }
 
-/*Global*/
+/*============================================Global============================================*/
 .container{
     width: 80%;
     margin: auto;
@@ -170,7 +170,7 @@ article#main-col {
     width: 65%;
 }
 
-/*Services*/
+/*============================================Services Page============================================*/
 ul#services li{
     list-style: none;
     padding: 20px;
@@ -186,44 +186,42 @@ footer{
     text-align: center;
 }
 
-/*Menu*/
+/*==================================Menu Page==================================*/
 /*Background Image*/
-.background {
+#menu .container {
     background-image: url("https://lh4.googleusercontent.com/R9fY2gohBcX0mqEQtgOMXBdemxQKO6P8iqRqAqfbq_Qk1I-Csi58gsBfhm4=w2400");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 100%;
-    height: 3300px;
-    position: absolute;
-    z-index: -1;
 }
 
 /*adjust all widths*/
-.menuTitle, .menuNav, h2, .starters li, .entrees-rice li, .entrees-noodles li {
-    width: 75vw;
-    max-width: 900px;
+.menuTitle, .menuNav, .menuItems h2, .starters li, .entrees-rice li, .entrees-noodles li {
+    width: 60%;
 }
 
 /*MENU TITLE*/
 .menuTitle {
-    background-color: lightgrey;
+    background-color:rgba(230, 230, 230, 0.75);
     text-align: center;
     margin: 0 auto;
+    margin-top: 10px;
     font-size: 1.5em;
-    height: 60px;
-    opacity: 0.75;
+}
+
+.menuTitle h1 {
+    padding: 0;
+    margin: 0;
 }
 
 /*MENU NAVBAR*/
 .menuNav {
-    background-color: lightgrey;
-    border: 1px solid black;
+    background-color:rgba(230, 230, 230, 0.75);
     padding: 10px 0px;
     margin: 0 auto;
     position: sticky;
     top: 0px;
-    z-index: 2;
     font-size: 1.2em;}
 .menuNav ul {
     display: inline-flex;}
@@ -233,32 +231,47 @@ footer{
 .menuNav a:visited {text-decoration: none; color: black;}
 
 /*All section titles*/
-h2 {
+.menuItems h2 {
     font-size: 1.75em;
     text-align: center;
     padding: 10px 0px;
     margin: 0 auto;
     margin-top: 10px;}
 /*Section Title Individual Settings*/
-#starters {
-    background-color:cornsilk}
-#entrees-rice {
-    background-color: cornsilk; } 
-#entrees-noodles {
-    background-color: cornsilk;}
+#starters, #entrees-rice, #entrees-noodles{
+    background-color: rgba(230, 230, 230, 0.75);}
 
 /*Item Grid Setup*/
 .starters li, .entrees-rice li, .entrees-noodles li {
     display: grid;
-    list-style-type: none;
     margin: 0 auto;
-    height: 160px;
     padding: 5px 0px;
-    grid-template-columns: 213px 1fr;
-    grid-template-rows: 32px 1fr;
-    background-color: rgba(211, 211, 211, 0.75);}
+    grid-template-areas:
+    "picture title"
+    "picture description";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 40px 120px;
+    background-color: rgba(230, 230, 230, 0.75);
+}
 
 /*ALL IMAGES*/
+li img {
+    height: 160px;
+    width: 213px;
+    object-fit: cover;
+    transition: transform .2s ease-in-out;
+    pointer-events: none;
+    transform-origin: 0%;
+    border-radius: 5%;
+}
+.triggerImg {
+    height: 160px;
+    width: 213px;
+}
+.triggerImg:hover img {
+    transform: scale(2);
+}
+
 li img {
     height: 160px;
     width: 213px;
@@ -274,43 +287,82 @@ li img {
     transform: scale(2);}
 
 /*Menu item titles and descriptions*/
-li > p {
-    grid-area: 2 / 2 / span 1 / span 2;
-    font-size: 1.2em;
-    margin-top: 2%;
-    overflow: auto;}
-
-h3, p {
-    padding-left: 10px;}
-li > h3 {
-    grid-area: "title";
-    font-size: 1.5em;}
-li > h3:after { 
+.menuItems p {
+    grid-area: description;
+    margin: 0;
+    padding-left: 5px;
+    overflow: auto;
+    line-height: 1em;
+}
+.menuItems h3 {
+    grid-area: title;
+    margin: 0;
+    padding-left: 5px;
+}
+.menuItems li > h3:after { 
     /*This is the underline*/
     border-bottom: 2px solid grey;
     content: "";
     display: block;
-    width: 175px;}
+    width: 175px;
+}
+
+#starters:after , #entrees-rice:after , #entrees-noodles:after, .menuTitle:after {
+    border-bottom: 2px solid grey;
+    content: "";
+    display: block;
+    width: 60%;
+    margin: 0 auto
+}
+
+
+/*==================================Contact Page==================================*/
+.contactUs {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contactSideMessage {
+    float: left;
+    width: 40%;
+    border: #cccccc solid 1px;
+    background: #e6e6e6;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contactForm {
+    float: right;
+    width: 50%;
+    border: #cccccc solid 1px;
+    background: #e6e6e6;
+    padding: 10px;
+}
+
+.contactForm section{
+    margin-bottom: 15px;
+}
 
 
 
-
+/*==================================Media Queries==================================*/
 /*Media Queries*/
 @media(max-width: 768px){
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box,
-    #boxes .container,
+    header #branding, header nav, header nav li,
+    #newsletter h1, #newsletter form,
+    #boxes .box, #boxes .container,
     article#main-col,
-    aside#sidebar
-     {
+    aside#sidebar,
+    .contactSideMessage, .contactForm {
         float: none;
         text-align: center;
-        width: 100%;
+        width: 99%;
         display: block;
+
+    }
+
+    .menuTitle, .menuNav, #starters, .starters li, #entrees-rice, .entrees-rice li, #entrees-noodles, .entrees-noodles li {
+        width: 100%;
     }
 
     header {
