@@ -8,7 +8,7 @@
     <meta name="description" content="This is the third iteration of my website">
     <meta name="keywords" content="Tea, T-Tyme, Blog">
     <meta name="author" content="Andrew Tsai">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
     <script src="main.js"></script>
 </head>
 <body>
@@ -28,14 +28,6 @@
             </nav>
         </div>
     </header>
-
-    <section id="showcase">
-        <div class="container">
-            
-            <h1>T-Type's Blog</h1>
-            <p>This is my website. There are many websites out there but this one is mine.</p>
-        </div>
-    </section>
     
     <section id="newsletter">
         <div class="container">
@@ -47,23 +39,70 @@
         </div>
     </section>
 
-    <section id="boxes">
+    <section id="main">
         <div class="container">
-            <div class="box">
-                <img src="./img/food_html.png">
-                <h3>Food</h3>
-                <p>It's really good</p>
+            <div class="contactUs">
+                <h1>Contact Us</h1>
             </div>
-            <div class="box">
-                <img src="./img/photography_html.png">
-                <h3>Photography</h3>
-                <p>It's also really good</p>
+            <div class="contactSideMessage">
+                <h2>Getting in Touch is Easy!</h2>
+                <p>T-Tyme's army of cats are here to serve you.</p>
+                <p>Email us with any question, comments, or commands. We promsie the sbumit button will work (eventually).</p>
             </div>
-            <div class="box">
-                <img src="./img/applications_html.png">
-                <h3>Applications</h3>
-                <p>One day there will be great apps</p>
+            <div class="contactForm">
+                <section class="contactForm_name">
+                    <label>How Shall We Call You?</label><br>
+                    <input type="text" placeholder="Name">
+                </section>
+                <section class="contactForm_email">
+                    <label>How May We Reach You?</label><br>
+                    <input type="text" placeholder="Email">
+                </section>
+                <section class="contactForm_praises">
+                    <label>How Many Praises Would You Like to Sing?</label><br>
+                    <input type="number" placeholder="2" min="0">
+                </section>
+                <section class="contactForm_satisfaction">
+                    <label>How Satisfied Are You?</label>
+                    <br>
+                    <span>Satisfied</span>
+                    <input type="range" value="3" min="1" max="5">
+                    <span>Very Satisfied</span>
+                </section>
+                <!--
+                <section class="contactForm_spam">
+                    <label>Which of the following spam would you like to sign up for?</label>
+                    <br>
+                    <input type="checkbox" name="spam" id="Ikea">
+                    <label>IKEA self-assembling newsletter</label>
+                    <br>
+                    <input type="checkbox" name="spam" id="Buzzfeed">
+                    <label>Buzzfeed gossip</label>
+                </section>
+                -->
+                <section class="contactForm_message">
+                    <label>Speak, Peon!</label><br>
+                    <textarea placeholder="We're all ears!" rows="4" cols="40"></textarea>
+                </section>
+                <section class="contactForm_sendCopy">
+                    <label>Send copy of message to email?</label>
+                    <input type="checkbox">
+                </section>
+                <section class="contactForm_replySpeed">
+                    <label>Please select a reply speed</label>
+                    <input list="reply" placeholder="Reply speed">
+                    <datalist id="reply">
+                        <option value="Premium Executive GoldClass Chairman- 6 hours, $100"></option>
+                        <option value="Exclusive Rewards President - 24 hours, $75"></option>
+                        <option value="Economy Instantnoodles Plebian - Whenever we feel like it, free"></option>
+                    </datalist>
+                </section>
+                <section class="submission">
+                    <input type="submit" value="Submit">
+                </section>
+              
             </div>
+            
         </div>
     </section>
 
