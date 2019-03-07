@@ -12,6 +12,11 @@ body{
     overflow: hidden;
 }
 
+.navcontainer{
+    width: 80%;
+    margin: auto;
+}
+
 ul{
     margin: 0;
     padding: 0;
@@ -47,6 +52,7 @@ header a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
+    transition: 0.2s;
 }
 
 header .logo{
@@ -60,11 +66,6 @@ header .logo{
 }
 header .logo:hover {
     transform: rotate(360deg);
-}
-
-header li{
-    display: inline;
-    padding: 0 20px;
 }
 
 header #branding{
@@ -87,8 +88,61 @@ header .highlight, header .current a{
 }
 
 header a:hover{
-    color:#cccccc;
-    font-weight: bold;
+    color:#e8491d;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+}
+
+/*Header Dropdown*/
+/*Dropdown Arrow*/
+i {
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 4px;
+    margin-left: 3px;
+  }
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/*Dropdown container*/
+header nav ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: .2s, 0s;
+    transition-delay: 0s, .2s;
+    border-radius: 0px 0px 8px 8px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0px;
+    background: #35424a;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+header nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s, 0s;
+}
+
+header nav ul li ul li {
+    display: block;
+}
+
+header nav ul li ul a{
+    display: block;
+}
+header nav ul li ul a:hover{
+    color: #e8491d;
+    background-color: #f2f2f2;
 }
 
 /*Showcase*/
@@ -168,6 +222,21 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
 article#main-col {
     float: left;
     width: 65%;
+}
+
+/*============================================About Page============================================*/
+.aboutImg {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 10px;
+    float: left;
+    shape-outside: padding-box;
+    padding: 0 30px 20px 0;
+}
+
+#main-col h1 {
+    font-size: 26px;
 }
 
 /*============================================Services Page============================================*/
@@ -322,6 +391,12 @@ li img {
     font-size: 20px;
 }
 
+.contactSideMessage img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
 .contactSideMessage {
     float: left;
     width: 40%;
@@ -343,11 +418,13 @@ li img {
     margin-bottom: 15px;
 }
 
-
+#browserResize{
+    display: none;
+}
 
 /*==================================Media Queries==================================*/
 /*Media Queries*/
-@media(max-width: 768px){
+@media(max-width: 1055px){
     header #branding, header nav, header nav li,
     #newsletter h1, #newsletter form,
     #boxes .box, #boxes .container,
@@ -358,7 +435,19 @@ li img {
         text-align: center;
         width: 99%;
         display: block;
+    }
 
+    header .logo{
+        margin-left: 20px;
+    }
+
+    .contactSideMessage img{
+        height: 250px;
+        width: auto;
+    }
+
+    .container{
+        overflow: visible;
     }
 
     .menuTitle, .menuNav, #starters, .starters li, #entrees-rice, .entrees-rice li, #entrees-noodles, .entrees-noodles li {
@@ -381,5 +470,16 @@ li img {
     #newsletter form input[type="email"], .quote input, .quote textarea{
         width:100%;
         margin-bottom: 5px;
+    }
+}
+
+
+@media(max-width: 250px){
+    header, section, footer {
+        display: none;
+    }
+    
+    #browserResize{
+        display: block;
     }
 }
